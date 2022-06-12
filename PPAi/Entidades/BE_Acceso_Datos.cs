@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 
-namespace PPAi.Entidades
+namespace prueba1.Clases
 {
     internal class BE_Acceso_Datos
     {
         SqlConnection conexion = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
-        DataTable tabla = new DataTable();
+       
 
         private void conenctar()
         {
@@ -21,21 +21,19 @@ namespace PPAi.Entidades
             cmd.Connection = conexion;
             cmd.CommandType = CommandType.Text;
         }
-
         private void desconectar()
         {
             conexion.Close();
         }
-        
-        public DataTable Ejecutar_Select (string sql)
+        public DataTable Ejecutar_Select(string sql)
         {
             conenctar();
             cmd.CommandText = sql;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(tabla);
+            DataTable tabla = new DataTable();
+            tabla.Load(cmd.ExecuteReader());
             desconectar();
             return tabla;
         }
-
+        
     }
 }

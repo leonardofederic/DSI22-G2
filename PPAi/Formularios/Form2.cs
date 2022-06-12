@@ -16,5 +16,10 @@ namespace PPAi.Formularios
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            cmb_TipoRT.cargarCombo();
+        }
     }
 }

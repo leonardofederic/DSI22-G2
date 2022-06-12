@@ -106,7 +106,7 @@
             // 
             // Btn_Cancelar
             // 
-            this.Btn_Cancelar.Location = new System.Drawing.Point(588, 381);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(512, 394);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(113, 53);
             this.Btn_Cancelar.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             // Btn_Aceptar
             // 
-            this.Btn_Aceptar.Location = new System.Drawing.Point(456, 381);
+            this.Btn_Aceptar.Location = new System.Drawing.Point(380, 394);
             this.Btn_Aceptar.Name = "Btn_Aceptar";
             this.Btn_Aceptar.Size = new System.Drawing.Size(113, 53);
             this.Btn_Aceptar.TabIndex = 8;
@@ -124,7 +124,7 @@
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(720, 381);
+            this.Btn_Salir.Location = new System.Drawing.Point(644, 394);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(113, 53);
             this.Btn_Salir.TabIndex = 9;
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPAi.Properties.Resources._1;
-            this.ClientSize = new System.Drawing.Size(846, 459);
+            this.ClientSize = new System.Drawing.Size(769, 459);
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.Btn_Aceptar);
             this.Controls.Add(this.Btn_Cancelar);
