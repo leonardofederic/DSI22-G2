@@ -32,6 +32,7 @@
             this.Btn_Cancelar = new System.Windows.Forms.Button();
             this.grid_Turno = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +41,7 @@
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(380, 337);
+            this.Btn_Salir.Location = new System.Drawing.Point(502, 337);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(75, 23);
             this.Btn_Salir.TabIndex = 0;
@@ -63,13 +64,14 @@
             this.grid_Turno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_Turno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column5,
             this.Column2,
             this.Column3,
             this.Column4});
             this.grid_Turno.Location = new System.Drawing.Point(11, 30);
             this.grid_Turno.Name = "grid_Turno";
             this.grid_Turno.ReadOnly = true;
-            this.grid_Turno.Size = new System.Drawing.Size(444, 258);
+            this.grid_Turno.Size = new System.Drawing.Size(545, 258);
             this.grid_Turno.TabIndex = 2;
             // 
             // Column1
@@ -77,6 +79,12 @@
             this.Column1.HeaderText = "N° Turno ";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Cientifico";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column2
             // 
@@ -101,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPAi.Properties.Resources._3;
-            this.ClientSize = new System.Drawing.Size(475, 372);
+            this.ClientSize = new System.Drawing.Size(589, 372);
             this.Controls.Add(this.grid_Turno);
             this.Controls.Add(this.Btn_Cancelar);
             this.Controls.Add(this.Btn_Salir);
@@ -118,6 +126,7 @@
         private System.Windows.Forms.Button Btn_Cancelar;
         private System.Windows.Forms.DataGridView grid_Turno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

@@ -10,3 +10,5 @@ C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.csproj.GenerateReso
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.csproj.CoreCompileInputs.cache
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.exe
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.pdb
+C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form3.resources
+C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form4.resources
