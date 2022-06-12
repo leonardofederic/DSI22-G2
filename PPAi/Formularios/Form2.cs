@@ -52,6 +52,8 @@ namespace PPAi.Formularios
             {
                 txt_NombreRT.Text = grid_RT.CurrentRow.Cells[0].Value.ToString();
                 txt_NumeroRT.Text = grid_RT.CurrentRow.Cells[1].Value.ToString();
+                cbx_notificar.SelectedIndex = 0;
+                cbx_motivo.SelectedIndex = 0;
             }
             catch (Exception ex)
             {

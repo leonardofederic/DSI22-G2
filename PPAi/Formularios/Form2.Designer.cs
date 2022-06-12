@@ -43,8 +43,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_NombreRT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_motivo = new System.Windows.Forms.ComboBox();
             this.txt_fechaPrevista = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbx_notificar = new System.Windows.Forms.ComboBox();
+            this.Btn_Cancelar = new System.Windows.Forms.Button();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +66,7 @@
             // 
             this.Btn_Aceptar.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Aceptar.Location = new System.Drawing.Point(654, 417);
+            this.Btn_Aceptar.Location = new System.Drawing.Point(668, 431);
             this.Btn_Aceptar.Name = "Btn_Aceptar";
             this.Btn_Aceptar.Size = new System.Drawing.Size(80, 27);
             this.Btn_Aceptar.TabIndex = 2;
@@ -73,7 +77,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(98, 365);
+            this.label4.Location = new System.Drawing.Point(373, 337);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 15);
             this.label4.TabIndex = 5;
@@ -83,11 +87,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 318);
+            this.label5.Location = new System.Drawing.Point(9, 297);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(211, 15);
+            this.label5.Size = new System.Drawing.Size(172, 15);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Numero Recursos Tecnológicos";
+            this.label5.Text = "N°Recursos Tecnológicos";
             // 
             // toolTip1
             // 
@@ -106,7 +110,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.grid_RT.Location = new System.Drawing.Point(12, 45);
+            this.grid_RT.Location = new System.Drawing.Point(12, 27);
             this.grid_RT.Name = "grid_RT";
             this.grid_RT.ReadOnly = true;
             this.grid_RT.Size = new System.Drawing.Size(694, 249);
@@ -142,7 +146,7 @@
             // 
             // txt_NumeroRT
             // 
-            this.txt_NumeroRT.Location = new System.Drawing.Point(234, 313);
+            this.txt_NumeroRT.Location = new System.Drawing.Point(187, 292);
             this.txt_NumeroRT.Name = "txt_NumeroRT";
             this.txt_NumeroRT.Size = new System.Drawing.Size(100, 20);
             this.txt_NumeroRT.TabIndex = 9;
@@ -151,7 +155,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(345, 318);
+            this.label6.Location = new System.Drawing.Point(342, 297);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(156, 15);
             this.label6.TabIndex = 10;
@@ -159,47 +163,94 @@
             // 
             // txt_NombreRT
             // 
-            this.txt_NombreRT.Location = new System.Drawing.Point(512, 313);
+            this.txt_NombreRT.Location = new System.Drawing.Point(512, 292);
             this.txt_NombreRT.Name = "txt_NombreRT";
-            this.txt_NombreRT.Size = new System.Drawing.Size(164, 20);
+            this.txt_NombreRT.Size = new System.Drawing.Size(236, 20);
             this.txt_NombreRT.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(445, 365);
+            this.label7.Location = new System.Drawing.Point(125, 337);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 15);
             this.label7.TabIndex = 12;
             this.label7.Text = "Motivos";
             // 
-            // comboBox1
+            // cbx_motivo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbx_motivo.FormattingEnabled = true;
+            this.cbx_motivo.Items.AddRange(new object[] {
             "Preventivo",
             "Mantenimiento Correctivo"});
-            this.comboBox1.Location = new System.Drawing.Point(512, 359);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 21);
-            this.comboBox1.TabIndex = 15;
+            this.cbx_motivo.Location = new System.Drawing.Point(187, 331);
+            this.cbx_motivo.Name = "cbx_motivo";
+            this.cbx_motivo.Size = new System.Drawing.Size(123, 21);
+            this.cbx_motivo.TabIndex = 15;
             // 
             // txt_fechaPrevista
             // 
-            this.txt_fechaPrevista.Location = new System.Drawing.Point(234, 360);
+            this.txt_fechaPrevista.Location = new System.Drawing.Point(512, 332);
             this.txt_fechaPrevista.Name = "txt_fechaPrevista";
             this.txt_fechaPrevista.Size = new System.Drawing.Size(200, 20);
             this.txt_fechaPrevista.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(55, 377);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 15);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Forma de Notificar";
+            // 
+            // cbx_notificar
+            // 
+            this.cbx_notificar.FormattingEnabled = true;
+            this.cbx_notificar.Items.AddRange(new object[] {
+            "Email ",
+            "Whatsapp"});
+            this.cbx_notificar.Location = new System.Drawing.Point(187, 371);
+            this.cbx_notificar.Name = "cbx_notificar";
+            this.cbx_notificar.Size = new System.Drawing.Size(164, 21);
+            this.cbx_notificar.TabIndex = 18;
+            // 
+            // Btn_Cancelar
+            // 
+            this.Btn_Cancelar.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.Btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Cancelar.Location = new System.Drawing.Point(570, 431);
+            this.Btn_Cancelar.Name = "Btn_Cancelar";
+            this.Btn_Cancelar.Size = new System.Drawing.Size(80, 27);
+            this.Btn_Cancelar.TabIndex = 19;
+            this.Btn_Cancelar.Text = "Cancelar";
+            this.Btn_Cancelar.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.Location = new System.Drawing.Point(472, 431);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(80, 27);
+            this.Btn_Buscar.TabIndex = 20;
+            this.Btn_Buscar.Text = "Buscar";
+            this.Btn_Buscar.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPAi.Properties.Resources._5;
-            this.ClientSize = new System.Drawing.Size(788, 484);
+            this.ClientSize = new System.Drawing.Size(763, 484);
+            this.Controls.Add(this.Btn_Buscar);
+            this.Controls.Add(this.Btn_Cancelar);
+            this.Controls.Add(this.cbx_notificar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_fechaPrevista);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_motivo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_NombreRT);
             this.Controls.Add(this.label6);
@@ -233,7 +284,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_NombreRT;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_motivo;
         private System.Windows.Forms.DateTimePicker txt_fechaPrevista;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbx_notificar;
+        private System.Windows.Forms.Button Btn_Cancelar;
+        private System.Windows.Forms.Button Btn_Buscar;
     }
 }
