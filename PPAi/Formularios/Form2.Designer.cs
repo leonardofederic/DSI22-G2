@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_Aceptar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -44,6 +42,9 @@
             this.txt_NumeroRT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_NombreRT = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_fechaPrevista = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,44 +60,24 @@
             // 
             // Btn_Aceptar
             // 
-            this.Btn_Aceptar.BackColor = System.Drawing.Color.Lime;
+            this.Btn_Aceptar.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Aceptar.Location = new System.Drawing.Point(846, 496);
+            this.Btn_Aceptar.Location = new System.Drawing.Point(654, 417);
             this.Btn_Aceptar.Name = "Btn_Aceptar";
             this.Btn_Aceptar.Size = new System.Drawing.Size(80, 27);
             this.Btn_Aceptar.TabIndex = 2;
             this.Btn_Aceptar.Text = "Aceptar";
             this.Btn_Aceptar.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 447);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Numero Recursos Tecnológicos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 404);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Numero Recursos Tecnológicos";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 361);
+            this.label4.Location = new System.Drawing.Point(98, 365);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 15);
+            this.label4.Size = new System.Drawing.Size(125, 15);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Numero Recursos Tecnológicos";
+            this.label4.Text = "Fecha Fin Prevista";
             // 
             // label5
             // 
@@ -180,23 +161,52 @@
             // 
             this.txt_NombreRT.Location = new System.Drawing.Point(512, 313);
             this.txt_NombreRT.Name = "txt_NombreRT";
-            this.txt_NombreRT.Size = new System.Drawing.Size(100, 20);
+            this.txt_NombreRT.Size = new System.Drawing.Size(164, 20);
             this.txt_NombreRT.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(445, 365);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 15);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Motivos";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Preventivo",
+            "Mantenimiento Correctivo"});
+            this.comboBox1.Location = new System.Drawing.Point(512, 359);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 21);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // txt_fechaPrevista
+            // 
+            this.txt_fechaPrevista.Location = new System.Drawing.Point(234, 360);
+            this.txt_fechaPrevista.Name = "txt_fechaPrevista";
+            this.txt_fechaPrevista.Size = new System.Drawing.Size(200, 20);
+            this.txt_fechaPrevista.TabIndex = 16;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPAi.Properties.Resources._5;
-            this.ClientSize = new System.Drawing.Size(938, 535);
+            this.ClientSize = new System.Drawing.Size(788, 484);
+            this.Controls.Add(this.txt_fechaPrevista);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_NombreRT);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_NumeroRT);
             this.Controls.Add(this.grid_RT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Btn_Aceptar);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
@@ -211,8 +221,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_Aceptar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -224,5 +232,8 @@
         private System.Windows.Forms.TextBox txt_NumeroRT;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_NombreRT;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker txt_fechaPrevista;
     }
 }
