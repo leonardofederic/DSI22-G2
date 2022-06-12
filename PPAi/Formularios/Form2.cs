@@ -45,5 +45,18 @@ namespace PPAi.Formularios
 
             }
         }
+
+        private void grid_RT_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txt_NombreRT.Text = grid_RT.CurrentRow.Cells[0].Value.ToString();
+                txt_NumeroRT.Text = grid_RT.CurrentRow.Cells[1].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

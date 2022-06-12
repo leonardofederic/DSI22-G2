@@ -41,6 +41,9 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_NumeroRT = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_NombreRT = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 15);
             this.label1.TabIndex = 1;
@@ -58,7 +61,7 @@
             // 
             this.Btn_Aceptar.BackColor = System.Drawing.Color.Lime;
             this.Btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Aceptar.Location = new System.Drawing.Point(458, 14);
+            this.Btn_Aceptar.Location = new System.Drawing.Point(846, 496);
             this.Btn_Aceptar.Name = "Btn_Aceptar";
             this.Btn_Aceptar.Size = new System.Drawing.Size(80, 27);
             this.Btn_Aceptar.TabIndex = 2;
@@ -69,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 192);
+            this.label2.Location = new System.Drawing.Point(12, 447);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 15);
             this.label2.TabIndex = 3;
@@ -79,7 +82,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 149);
+            this.label3.Location = new System.Drawing.Point(12, 404);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 15);
             this.label3.TabIndex = 4;
@@ -89,7 +92,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 106);
+            this.label4.Location = new System.Drawing.Point(12, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(211, 15);
             this.label4.TabIndex = 5;
@@ -99,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 63);
+            this.label5.Location = new System.Drawing.Point(12, 318);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(211, 15);
             this.label5.TabIndex = 6;
@@ -122,11 +125,12 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.grid_RT.Location = new System.Drawing.Point(0, 229);
+            this.grid_RT.Location = new System.Drawing.Point(12, 45);
             this.grid_RT.Name = "grid_RT";
             this.grid_RT.ReadOnly = true;
             this.grid_RT.Size = new System.Drawing.Size(694, 249);
             this.grid_RT.TabIndex = 8;
+            this.grid_RT.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_RT_CellDoubleClick);
             // 
             // Column1
             // 
@@ -155,12 +159,39 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 150;
             // 
+            // txt_NumeroRT
+            // 
+            this.txt_NumeroRT.Location = new System.Drawing.Point(234, 313);
+            this.txt_NumeroRT.Name = "txt_NumeroRT";
+            this.txt_NumeroRT.Size = new System.Drawing.Size(100, 20);
+            this.txt_NumeroRT.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(345, 318);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(156, 15);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Recursos Tecnológicos";
+            // 
+            // txt_NombreRT
+            // 
+            this.txt_NombreRT.Location = new System.Drawing.Point(512, 313);
+            this.txt_NombreRT.Name = "txt_NombreRT";
+            this.txt_NombreRT.Size = new System.Drawing.Size(100, 20);
+            this.txt_NombreRT.TabIndex = 11;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PPAi.Properties.Resources._2;
+            this.BackgroundImage = global::PPAi.Properties.Resources._5;
             this.ClientSize = new System.Drawing.Size(938, 535);
+            this.Controls.Add(this.txt_NombreRT);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_NumeroRT);
             this.Controls.Add(this.grid_RT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -190,5 +221,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.TextBox txt_NumeroRT;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_NombreRT;
     }
 }
