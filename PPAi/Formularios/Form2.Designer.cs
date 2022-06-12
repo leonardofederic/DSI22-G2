@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_Aceptar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmb_TipoRT = new prueba1.Clases.ComboBox01();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.grid_RT = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,24 +105,63 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Numero Recursos Tecnológicos";
             // 
-            // cmb_TipoRT
+            // toolTip1
             // 
-            this.cmb_TipoRT.FormattingEnabled = true;
-            this.cmb_TipoRT.Location = new System.Drawing.Point(209, 17);
-            this.cmb_TipoRT.Name = "cmb_TipoRT";
-            this.cmb_TipoRT.Pp_descripcion = "nombre";
-            this.cmb_TipoRT.Pp_Pk = "cod_tipoRT ";
-            this.cmb_TipoRT.Pp_tabla = "TipoRecursoTecnologico";
-            this.cmb_TipoRT.Size = new System.Drawing.Size(234, 21);
-            this.cmb_TipoRT.TabIndex = 7;
+            this.toolTip1.AutoPopDelay = 50000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 100;
+            // 
+            // grid_RT
+            // 
+            this.grid_RT.AllowUserToAddRows = false;
+            this.grid_RT.AllowUserToDeleteRows = false;
+            this.grid_RT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_RT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.grid_RT.Location = new System.Drawing.Point(0, 229);
+            this.grid_RT.Name = "grid_RT";
+            this.grid_RT.ReadOnly = true;
+            this.grid_RT.Size = new System.Drawing.Size(694, 249);
+            this.grid_RT.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tipo de Recurso";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 250;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Número RT";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Marca";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Modelo";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPAi.Properties.Resources._2;
-            this.ClientSize = new System.Drawing.Size(912, 496);
-            this.Controls.Add(this.cmb_TipoRT);
+            this.ClientSize = new System.Drawing.Size(938, 535);
+            this.Controls.Add(this.grid_RT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -125,6 +171,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +184,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private prueba1.Clases.ComboBox01 cmb_TipoRT;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridView grid_RT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

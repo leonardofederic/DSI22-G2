@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using PPAi.Entidades;
+
 
 namespace PPAi.Entidades
 {
     public class RecursoTecnológico
     {
+        BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+
         public RecursoTecnológico()
         {
 
@@ -60,6 +66,13 @@ namespace PPAi.Entidades
         {
             get => duracionMant;
             set => duracionMant = value;
+        }
+        public DataTable RecuperarRT()
+        {
+            string sql = "select t.nombre as cod_tipoRT, r.numeroRT, p.nombre as marca, q.nombre as modelo from RecursoTecnologico r,Marca p, Modelo q, TipoRecursoTecnologico t WHERE r.modelo = q.cod_modelo and p.cod_marca = r.marca and t.cod_tipoRT = r.cod_tipoRT Order BY  t.nombre";
+            //BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+            return _BD.Ejecutar_Select(sql);
+            
         }
         
     }

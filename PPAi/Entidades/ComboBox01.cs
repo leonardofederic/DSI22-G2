@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using PPAi.Entidades;
 
 namespace prueba1.Clases
 {

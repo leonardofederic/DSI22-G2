@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace prueba1.Clases
+
+namespace PPAi.Entidades
 {
     internal class BE_Acceso_Datos
     {
         SqlConnection conexion = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
-       
+
 
         private void conenctar()
         {
@@ -34,6 +35,6 @@ namespace prueba1.Clases
             desconectar();
             return tabla;
         }
-        
+
     }
 }
