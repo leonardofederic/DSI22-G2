@@ -13,7 +13,7 @@ namespace PPAi.Entidades
 
         }
         private int _idReserva;
-        private int _estado;
+        private Estado _estado;
         private string _fechaInicio;
         private string _fechaFin;
 
@@ -22,7 +22,7 @@ namespace PPAi.Entidades
             get => _idReserva;
             set => _idReserva = value;
         }
-        public int estado
+        public Estado estado
         {
             get => _estado;
             set => _estado = value;
@@ -38,6 +38,14 @@ namespace PPAi.Entidades
             set => _fechaFin = value;
         }
         
-
+        public bool esConfirmado(Estado confirmado) { return estado == confirmado; }
+        public bool esPendienteDeConfirmacion(Estado pendienteDeConfirmacion) { return estado == pendienteDeConfirmacion; }
+        public List<string> mostrarReserva()
+        {
+            List<string> datos = new List<string>();
+            datos.Add(fechaInicio);
+            datos.Add(fechaFin);
+            return datos;
+        }
     }
 }

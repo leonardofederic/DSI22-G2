@@ -12,3 +12,16 @@ C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.exe
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.pdb
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form3.resources
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form4.resources
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\bin\Debug\PPAi.exe.config
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\bin\Debug\PPAi.exe
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\bin\Debug\PPAi.pdb
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.csproj.AssemblyReference.cache
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.Form1.resources
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.Formularios.Form2.resources
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.Formularios.Form3.resources
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.Formularios.Form4.resources
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.Properties.Resources.resources
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.csproj.GenerateResource.cache
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.csproj.CoreCompileInputs.cache
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.exe
+E:\Proyectos\PPAI_DSI\DSI22-G2\PPAi\obj\Debug\PPAi.pdb

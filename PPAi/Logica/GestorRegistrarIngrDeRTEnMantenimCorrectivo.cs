@@ -9,9 +9,12 @@ using PPAi.Entidades;
 
 namespace PPAi.Logica
 {
-    public class GestorRegistrarIngrDeRTEnMantenimCorrectivo
+    class GestorRegistrarIngrDeRTEnMantenimCorrectivo
     {
         int UsuarioLoguidado;
+        RecursoTecnológico elegido;       
+
+
         public static int obtenerUsuarioLogueado()
         {
             //busca el usuario Logueado, Metodo ubicado en Sesion.
@@ -42,8 +45,19 @@ namespace PPAi.Logica
         //{ return; }
         //public static DataTable tomarMotivoMantenimiento()
         //{ return; }
-        //public static DataTable buscarExistenciaTurno()
-        //{ return; }
+        public void buscarExistenciaTurno()
+        {
+            List<Estado> estados = null; // cargar lista de estados
+            Estado pendienteDeConfirmacion = null;
+            Estado confirmado = null;
+            foreach(Estado estado in estados)
+            {
+                if (estado.esAmbitoReserva()){
+                    if(estado.esPendienteConfirmacion()) { pendienteDeConfirmacion = estado; }
+                    else if (estado.esConfirmado()) { confirmado = estado; }
+            }
+            elegido.mostrarTurnoReservado(pendienteDeConfirmacion, confirmado);
+        }
         //public static DataTable ordenarPorCientifico()
         //{ return; }
         //public static DataTable tomarConfirmacionMantenimiento()

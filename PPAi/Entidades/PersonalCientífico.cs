@@ -79,7 +79,15 @@ namespace PPAi.Entidades
             get => idAsgCienti;
             set => idAsgCienti = value;
         }
-        
+        public List<string> mostrarDatos()
+        {
+            //retorna una lista con los datos minimos del personal cientifico
+            List<string> datos = new List<string>();
+            datos.Add(Nombre);
+            datos.Add(apellido);
+            datos.Add(legajo.ToString());
 
+            return datos;
+        }
     }
 }
