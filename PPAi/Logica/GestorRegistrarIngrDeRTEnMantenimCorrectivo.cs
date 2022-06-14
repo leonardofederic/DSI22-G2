@@ -11,14 +11,24 @@ namespace PPAi.Logica
 {
     public class GestorRegistrarIngrDeRTEnMantenimCorrectivo
     {
-        int UsuarioLoguidado;
+        //public static DataTable tomarRegIngreRTMantenimCorrect()
+        //{
+        //DataTable grilla = obtenerUsuarioLogueado()
+        // return grilla; }
+
+
+         int UsuarioLoguidado;
+        
         public static int obtenerUsuarioLogueado()
         {
             //busca el usuario Logueado, Metodo ubicado en Sesion.
-            var emple = Sesion.getUsuarioEnSesion(1);
-            
+            var emple = Secion.getUsuarioEnSesion(1);
             int i = emple.LegajoCientifi;
-            
+            //DataTable grilla = buscarSede(i);
+            //return grilla;
+
+
+
             return i;
         }
         public static DateTime tomarFechaYHoraActualSistema()
@@ -26,22 +36,24 @@ namespace PPAi.Logica
             DateTime today = DateTime.Today;
             return today;
         }
-        //public static DataTable tomarRegIngreRTMantenimCorrect()
-        //{ return; }
+        
 
         //public static DataTable buscarEstadoDisponible()
         //{ return; }
 
-        //public static DataTable buscarRTDisponible()
+        //public static DataTable buscarRTDisponible() leo
         //{ return; }
-        //public static DataTable ordenarTipoRT()
+        //public static DataTable ordenarTipoRT() leo
         //{ return; }
-        //public static DataTable tomarRTSelecionado()
+        //public static DataTable tomarRTSelecionado() leo
         //{ return; }
-        //public static DataTable tomarFechaPrevistaDatosMant()
+        //public static DataTable tomarFechaPrevistaDatosMant() leo
         //{ return; }
-        //public static DataTable tomarMotivoMantenimiento()
+        //public static DataTable tomarMotivoMantenimiento() leo
         //{ return; }
+
+
+        
         //public static DataTable buscarExistenciaTurno()
         //{ return; }
         //public static DataTable ordenarPorCientifico()

@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace PPAi.Entidades
 {
-    public class Sesion
+    public class Secion
     {
-        public Sesion()
+        public Secion()
         {
 
         }
 
-        private int idSesion;
+        private int idSecion;
         private string fechaInicio;
         private string fechaFin;
         private string horaInicio;
@@ -24,8 +24,8 @@ namespace PPAi.Entidades
 
         public int iDSesion
         {
-            get => idSesion;
-            set => idSesion = value;
+            get => idSecion;
+            set => idSecion = value;
         }
 
         public int iDUsu
@@ -61,7 +61,7 @@ namespace PPAi.Entidades
         {
             String cadenaConexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=PPAi;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cadenaConexion);
-            Sesion u = new Sesion();
+            Secion u = new Secion();
             try
             {
 
@@ -75,7 +75,7 @@ namespace PPAi.Entidades
                 SqlDataReader dr = comando.ExecuteReader();
                 if (dr != null & dr.Read())
                 {
-                    u.idSesion = int.Parse(dr["idSesion"].ToString());
+                    u.idSecion = int.Parse(dr["idSesion"].ToString());
                     u.horaFin = dr["horaFin"].ToString();
                     u.horaInicio = dr["horaInicio"].ToString();
                     u.fechaFin = dr["fechaFin"].ToString();

@@ -61,7 +61,7 @@
     <Compile Include="Entidades\PersonalCientífico.cs" />
     <Compile Include="Entidades\RecursoTecnológico.cs" />
     <Compile Include="Entidades\Reserva.cs" />
-    <Compile Include="Entidades\Sesion.cs" />
+    <Compile Include="Entidades\Secion.cs" />
     <Compile Include="Entidades\TipoRecursoTecnológico.cs" />
     <Compile Include="Entidades\Turno.cs" />
     <Compile Include="Entidades\Usuario.cs" />
