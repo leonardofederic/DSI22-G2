@@ -11,14 +11,27 @@ namespace PPAi.Logica
 {
     public class GestorRegistrarIngrDeRTEnMantenimCorrectivo
     {
+        int UsuarioLoguidado;
+        public static int obtenerUsuarioLogueado()
+        {
+            //busca el usuario Logueado, Metodo ubicado en Sesion.
+            var emple = Sesion.getUsuarioEnSesion(1);
+            
+            int i = emple.LegajoCientifi;
+            
+            return i;
+        }
+        public static DateTime tomarFechaYHoraActualSistema()
+        {
+            DateTime today = DateTime.Today;
+            return today;
+        }
         //public static DataTable tomarRegIngreRTMantenimCorrect()
         //{ return; }
-        //public static DataTable obtenerUsuarioLogueado()
-        //{ return; }
+
         //public static DataTable buscarEstadoDisponible()
         //{ return; }
-        //public static DataTable tomarFechaYHoraActualSistema()
-        //{ return; }
+
         //public static DataTable buscarRTDisponible()
         //{ return; }
         //public static DataTable ordenarTipoRT()

@@ -49,6 +49,10 @@
             this.cbx_notificar = new System.Windows.Forms.ComboBox();
             this.Btn_Cancelar = new System.Windows.Forms.Button();
             this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHora = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,12 +243,48 @@
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(469, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 231;
+            this.label3.Text = "Hora";
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(512, 4);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(84, 20);
+            this.txtHora.TabIndex = 230;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(612, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 229;
+            this.label8.Text = "Fecha";
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(662, 4);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(94, 20);
+            this.txtFecha.TabIndex = 228;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPAi.Properties.Resources._5;
             this.ClientSize = new System.Drawing.Size(763, 484);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtHora);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.Btn_Buscar);
             this.Controls.Add(this.Btn_Cancelar);
             this.Controls.Add(this.cbx_notificar);
@@ -290,5 +330,9 @@
         private System.Windows.Forms.ComboBox cbx_notificar;
         private System.Windows.Forms.Button Btn_Cancelar;
         private System.Windows.Forms.Button Btn_Buscar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHora;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

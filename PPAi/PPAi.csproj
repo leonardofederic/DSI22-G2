@@ -92,6 +92,7 @@
     <Compile Include="Logica\GestorRegistrarIngrDeRTEnMantenimCorrectivo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Configuration\ConfigurationManager.cs" />
     <EmbeddedResource Include="Formularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -5,6 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PPAi.Entidades;
+
+
 
 
 namespace PPAi.Entidades
@@ -16,39 +19,77 @@ namespace PPAi.Entidades
 
         }
 
-        private int _cod_usuario;
-        private string _clave;
-        private string _usuario;
-        private int _legajoCientifi;
-        private bool _habilitado;
+        private int cod_usuario;
+        private string clave;
+        private string usuario;
+        private int legajoCientifi;
+        private string habilitado;
 
-        public int legajoCientifi
+        public int LegajoCientifi
         {
-            get => _legajoCientifi;
-            set => _legajoCientifi = value;
+            get => legajoCientifi;
+            set => legajoCientifi = value;
         }
-        public int cod_usuario
+        public int Cod_usuario
         {
-            get => _cod_usuario;
-            set => _cod_usuario = value;
+            get => cod_usuario;
+            set => cod_usuario = value;
         }
-        public string clave
+        public string Clave
         {
-            get => _clave;
-            set => _clave = value;
+            get => clave;
+            set => clave = value;
         }
-        public string usuario
+        public string USuario
         {
-            get => _usuario;
-            set => _usuario = value;
+            get => usuario;
+            set => usuario = value;
         }
-        public bool habilitado
+        public string Habilitado
         {
-            get => _habilitado;
-            set => _habilitado = value;
+            get => habilitado;
+            set => habilitado = value;
         }
 
+        public static Usuario obtenerPersonalCientífico(int id_usu)
+        {
+            //String cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaDB"];
+            string cadenaConexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=PPAi;Integrated Security=True";
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            Usuario u = new Usuario();
+            try
+            {
 
+                SqlCommand comando = new SqlCommand();
+                String consulta = "SELECT * FROM Usuario where cod_usuario like @cod_usuario";
+                comando.Parameters.AddWithValue("@cod_usuario", id_usu);
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = consulta;
+                cn.Open();
+                comando.Connection = cn;
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr != null & dr.Read())
+                {
+                    u.cod_usuario = int.Parse(dr["cod_usuario"].ToString());
+                    u.usuario = dr["usuario"].ToString();
+                    u.habilitado = dr["habilitado"].ToString();
+                    u.clave = dr["clave"].ToString();
+                    u.legajoCientifi = int.Parse(dr["legajoCientifi"].ToString());
+                }
+
+                return u;
+
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
 
 
     }

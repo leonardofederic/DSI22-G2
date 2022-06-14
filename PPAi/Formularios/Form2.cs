@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PPAi.Logica;
 
 using PPAi.Entidades;
 
@@ -16,6 +17,7 @@ namespace PPAi.Formularios
 {
     public partial class Form2 : Form
     {
+        int UsuarioLoguidado;
         public Form2()
         {
             RecursoTecnológico RT = new RecursoTecnológico();
@@ -23,6 +25,10 @@ namespace PPAi.Formularios
             DataTable tabla = new DataTable();
             tabla = RT.RecuperarRT();
             CargarGrilla(tabla);
+            txtHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            txtFecha.Text = GestorRegistrarIngrDeRTEnMantenimCorrectivo.tomarFechaYHoraActualSistema().ToString("yyyy/MM/dd");
+            UsuarioLoguidado = GestorRegistrarIngrDeRTEnMantenimCorrectivo.obtenerUsuarioLogueado();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
