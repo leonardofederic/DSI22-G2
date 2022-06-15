@@ -73,8 +73,9 @@ namespace PPAi.Formularios
         {
             int recursoSelec = Convert.ToInt32(txt_NumeroRT.Text);
             DateTime fecha = Convert.ToDateTime(txt_fechaPrevista.Value.ToString());
+            string motivo = cbx_motivo.Text;
 
-            MessageBox.Show(recursoSelec.ToString() + " " + fecha.Date.ToString("dd/MM/yyyy"));
+            MessageBox.Show(recursoSelec.ToString() + " " + fecha.Date.ToString("dd/MM/yyyy") + " " + motivo.ToString());
 
         }
 

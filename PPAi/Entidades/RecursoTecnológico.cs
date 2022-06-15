@@ -16,7 +16,7 @@ namespace PPAi.Entidades
 
         public RecursoTecnológico()
         {
-
+            
         }
         private byte _imgen;
         private string fechaAlta;
@@ -26,6 +26,7 @@ namespace PPAi.Entidades
         private int numeroRT;
         private int periodicidadMant;
         private int duracionMant;
+        private List<Turno> turno;
 
         public byte imgen
         {
@@ -67,6 +68,7 @@ namespace PPAi.Entidades
             get => duracionMant;
             set => duracionMant = value;
         }
+
         public DataTable RecuperarRT()
         {
             string sql = "select t.nombre as cod_tipoRT, r.numeroRT, p.nombre as marca, q.nombre as modelo from RecursoTecnologico r,Marca p, Modelo q, TipoRecursoTecnologico t WHERE r.modelo = q.cod_modelo and p.cod_marca = r.marca and t.cod_tipoRT = r.cod_tipoRT Order BY  t.nombre";
@@ -74,6 +76,15 @@ namespace PPAi.Entidades
             return _BD.Ejecutar_Select(sql);
             
         }
-        
+        public List<List<string>> mostrarTurnoReservado(Estado pendienteDeConfirmacion, Estado confirmado, List<AsignaciónCientíficoDelCI> asignacionesCientificos)
+        {
+            List<List<string>> datos = null;
+            foreach (Turno turn in turno)
+            {
+                List<string> recibido = turn.mostarReserva(pendienteDeConfirmacion, confirmado, asignacionesCientificos);
+                if(recibido != null) { datos.Add(recibido); }
+            }
+            return datos;
+        }
     }
 }

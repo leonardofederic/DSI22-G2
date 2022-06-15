@@ -14,7 +14,7 @@ namespace PPAi.Entidades
     {
         public Estado()
         {
-
+            
         }
         private string nombre;
         private string descripcion;
@@ -138,8 +138,8 @@ namespace PPAi.Entidades
                 cn.Close();
             }
         }
-            
-         
-
+        public bool esAmbitoReserva() { return ambito == "Reserva"; }
+        public bool esPendienteConfirmacion() { return nombre == "Pendiente de confirmacion"; }
+        public bool esConfirmado() { return nombre == "Confirmado"; }
     }
 }

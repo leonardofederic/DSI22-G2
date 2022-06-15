@@ -33,7 +33,6 @@
             this.grid_Turno = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Turno)).BeginInit();
@@ -65,13 +64,12 @@
             this.grid_Turno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column5,
-            this.Column2,
             this.Column3,
             this.Column4});
             this.grid_Turno.Location = new System.Drawing.Point(11, 30);
             this.grid_Turno.Name = "grid_Turno";
             this.grid_Turno.ReadOnly = true;
-            this.grid_Turno.Size = new System.Drawing.Size(545, 258);
+            this.grid_Turno.Size = new System.Drawing.Size(566, 258);
             this.grid_Turno.TabIndex = 2;
             // 
             // Column1
@@ -85,12 +83,6 @@
             this.Column5.HeaderText = "Cientifico";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Estado";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -127,7 +119,6 @@
         private System.Windows.Forms.DataGridView grid_Turno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }

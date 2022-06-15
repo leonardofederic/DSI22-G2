@@ -14,8 +14,11 @@ namespace PPAi.Entidades
         }
         private int _idAsgCienti;
         private int _cod_centro_invest;
+
         private string _fechaHasta;
         private string _fechaDesde;
+        private List<Turno> turnos;
+        private PersonalCientífico personalCientífico;
 
         public int idAsgCienti
         {
@@ -37,6 +40,20 @@ namespace PPAi.Entidades
             get => _fechaDesde;
             set => _fechaDesde = value;
         }
-
+        public bool esTuTurno(Turno turn)
+        {
+            // si la asignacionCientifico posee el turno enviado como parametro retorna true
+            bool respuesta = false;
+            foreach(Turno turno in turnos)
+            {
+                if (turno == turn) { respuesta = true; }
+            }
+            return respuesta;
+        }
+        public string mostrarDatosCientifico()
+        {
+            //retorna una lista con los datos minimos del personal cientifico asocioado a esta asignacionCientifico
+            return personalCientífico.mostrarDatos();
+        }
     }
 }

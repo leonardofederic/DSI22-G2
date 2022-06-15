@@ -10,8 +10,13 @@ using PPAi.Formularios;
 
 namespace PPAi.Logica
 {
-    public class GestorRegistrarIngrDeRTEnMantenimCorrectivo
+    class GestorRegistrarIngrDeRTEnMantenimCorrectivo
     {
+        int UsuarioLoguidado;
+        RecursoTecnológico elegido;
+
+
+        //public static int obtenerUsuarioLogueado() { }
         public static DataTable tomarRegIngreRTMantenimCorrect()
         {
             DataTable grilla = obtenerUsuarioLogueado();

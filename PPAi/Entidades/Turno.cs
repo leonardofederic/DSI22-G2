@@ -19,6 +19,7 @@ namespace PPAi.Entidades
         private string diaSemana;
         private string fechaHoraInicio;
         private string fechaHoraFin;
+        private Reserva reserva;
 
         public int idAsgCienti1
         {
@@ -55,7 +56,26 @@ namespace PPAi.Entidades
             get => fechaHoraFin;
             set => fechaHoraFin = value;
         }
-        
-        
+        public List<string> mostarReserva(Estado pendienteDeConfirmacion, Estado confirmado, List<AsignaciónCientíficoDelCI> asignacionesCientificos)
+        {
+            //si el estado de la reserva asociada al turno es confirmado o pendiente de confirmacion retorna los datos del turno y del personal cientifico
+            List<string> datos = null;
+            if (reserva.esConfirmado(confirmado) || reserva.esPendienteDeConfirmacion(pendienteDeConfirmacion))
+            {
+                datos.Add(cod_turno.ToString()); //numero de turno
+                datos.Add(reserva.mostrarReserva()); //fecha y hora reserva
+                
+                //busca la asignacion que tenga asocioado este turno entre las asgnaciones que llegaron como parametro y agrega a la cadena los datos del personal cientifico
+                foreach(AsignaciónCientíficoDelCI asignacion in asignacionesCientificos)
+                {
+                    if (asignacion.esTuTurno(this))
+                    {
+                        datos.Add(asignacion.mostrarDatosCientifico()); //nombre y apellido cientifico
+                    }
+                }
+                return datos;
+            }
+            return datos;
+    }
     }
 }
