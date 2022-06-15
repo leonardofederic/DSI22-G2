@@ -1,6 +1,6 @@
 ﻿namespace PPAi
 {
-    partial class Form1
+    partial class Ventana_Pricipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.

@@ -15,7 +15,6 @@ namespace PPAi.Entidades
         private int idAsgCienti;
         private int numeroRT;
         private int cod_turno;
-       
         private string fechaGenera;
         private string diaSemana;
         private string fechaHoraInicio;
@@ -56,6 +55,7 @@ namespace PPAi.Entidades
             get => fechaHoraFin;
             set => fechaHoraFin = value;
         }
+        
         
     }
 }

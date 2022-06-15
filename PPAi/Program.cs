@@ -17,8 +17,8 @@ namespace PPAi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Application.Run(new Formularios.Form2());
+            Application.Run(new Ventana_Pricipal());
+            //Application.Run(new Formularios.Ventana_Secuandario());
         }
     }
 }

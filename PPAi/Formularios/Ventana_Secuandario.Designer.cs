@@ -1,6 +1,6 @@
 ﻿namespace PPAi.Formularios
 {
-    partial class Form2
+    partial class Ventana_Secuandario
     {
         /// <summary>
         /// Required designer variable.
@@ -76,6 +76,7 @@
             this.Btn_Aceptar.TabIndex = 2;
             this.Btn_Aceptar.Text = "Aceptar";
             this.Btn_Aceptar.UseVisualStyleBackColor = false;
+            this.Btn_Aceptar.Click += new System.EventHandler(this.Btn_Aceptar_Click);
             // 
             // label4
             // 
@@ -231,6 +232,7 @@
             this.Btn_Cancelar.TabIndex = 19;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.UseVisualStyleBackColor = false;
+            this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
             // 
             // Btn_Buscar
             // 
@@ -242,6 +244,7 @@
             this.Btn_Buscar.TabIndex = 20;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = false;
+            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
             // 
             // label3
             // 
@@ -275,7 +278,7 @@
             this.txtFecha.Size = new System.Drawing.Size(94, 20);
             this.txtFecha.TabIndex = 228;
             // 
-            // Form2
+            // Ventana_Secuandario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -300,7 +303,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Btn_Aceptar);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "Ventana_Secuandario";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_RT)).EndInit();

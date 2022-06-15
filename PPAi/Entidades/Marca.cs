@@ -30,7 +30,6 @@ namespace PPAi.Entidades
             get => nombre;
             set => nombre = value;
         }
-
-
+        
     }
 }

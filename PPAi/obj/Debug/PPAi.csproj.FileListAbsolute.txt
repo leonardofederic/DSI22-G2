@@ -3,8 +3,6 @@ C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\bin\Debug\PPAi.exe
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\bin\Debug\PPAi.pdb
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.csproj.AssemblyReference.cache
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.csproj.SuggestedBindingRedirects.cache
-C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Form1.resources
-C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form2.resources
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Properties.Resources.resources
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.csproj.GenerateResource.cache
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.csproj.CoreCompileInputs.cache
@@ -12,3 +10,5 @@ C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.exe
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.pdb
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form3.resources
 C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Form4.resources
+C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Ventana_Pricipal.resources
+C:\apuntes\Dsi22\PPAI\PPAI22 codigo\PPAi\PPAi\obj\Debug\PPAi.Formularios.Ventana_Secuandario.resources

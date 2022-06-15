@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using PPAi.Logica;
-
+using PPAi.Formularios;
 using PPAi.Entidades;
 
 
 namespace PPAi.Formularios
 {
-    public partial class Form2 : Form
+    public partial class Ventana_Secuandario : Form
     {
-        int UsuarioLoguidado;
-        public Form2()
+        //int UsuarioLoguidado;
+        public Ventana_Secuandario()
         {
             RecursoTecnológico RT = new RecursoTecnológico();
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace PPAi.Formularios
             CargarGrilla(tabla);
             txtHora.Text = DateTime.Now.ToString("hh:mm:ss");
             txtFecha.Text = GestorRegistrarIngrDeRTEnMantenimCorrectivo.tomarFechaYHoraActualSistema().ToString("yyyy/MM/dd");
-            UsuarioLoguidado = GestorRegistrarIngrDeRTEnMantenimCorrectivo.obtenerUsuarioLogueado();
+            //UsuarioLoguidado = GestorRegistrarIngrDeRTEnMantenimCorrectivo.obtenerUsuarioLogueado();
 
         }
 
@@ -67,6 +67,24 @@ namespace PPAi.Formularios
             }
         }
 
-       
+        private void Btn_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult opc;
+            opc=MessageBox.Show("desea cancelar el registro de Mantenimiento ?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (opc == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void Btn_Aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
