@@ -28,6 +28,7 @@ namespace PPAi.Formularios
             txtHora.Text = DateTime.Now.ToString("hh:mm:ss");
             txtFecha.Text = GestorRegistrarIngrDeRTEnMantenimCorrectivo.tomarFechaYHoraActualSistema().ToString("yyyy/MM/dd");
             //UsuarioLoguidado = GestorRegistrarIngrDeRTEnMantenimCorrectivo.obtenerUsuarioLogueado();
+            
 
         }
 
@@ -65,10 +66,15 @@ namespace PPAi.Formularios
             {
                 MessageBox.Show(ex.Message);
             }
+            MessageBox.Show("Ingrese hasta que fecha vas esta inahilitado y el motivo por favor ", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
+            int recursoSelec = Convert.ToInt32(txt_NumeroRT.Text);
+            DateTime fecha = Convert.ToDateTime(txt_fechaPrevista.Value.ToString());
+
+            MessageBox.Show(recursoSelec.ToString() + " " + fecha.Date.ToString("dd/MM/yyyy"));
 
         }
 

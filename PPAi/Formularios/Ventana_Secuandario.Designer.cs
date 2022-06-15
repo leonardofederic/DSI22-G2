@@ -191,7 +191,7 @@
             "Mantenimiento Correctivo"});
             this.cbx_motivo.Location = new System.Drawing.Point(187, 331);
             this.cbx_motivo.Name = "cbx_motivo";
-            this.cbx_motivo.Size = new System.Drawing.Size(123, 21);
+            this.cbx_motivo.Size = new System.Drawing.Size(148, 21);
             this.cbx_motivo.TabIndex = 15;
             // 
             // txt_fechaPrevista
