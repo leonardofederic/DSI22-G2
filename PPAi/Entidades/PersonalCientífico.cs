@@ -8,78 +8,26 @@ namespace PPAi.Entidades
 {
     public class PersonalCientífico
     {
-       public PersonalCientífico()
-        {
-           
-        }
-        private string correo_institucional;
-        private string correo_personal;
-        private string nombre;
-        private string apellido;
-        private int num_docu;
-        private int legajo;
-        private int telef;
-        private int cod_facultad;
-        private int idAsiRepRT;
-        private int idAsiDirect;
-        private int idAsgCienti;
+        public string correoElectronicoInstitucional { get; set; }
+        public string correoElectronicoPersonal { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public int numeroDocumento { get; set; }
+        public int legajo { get; set; }
+        public int telefonoCelular { get; set; }
+        public Usuario usuario { get; set; }
 
-        public string Correo_institucional
+        public bool mostrarDatosCientifico(string nombreUsuario)
         {
-            get => correo_institucional;
-            set => correo_institucional = value;
+            usuario = new Usuario();
+            if (usuario.usuario == nombreUsuario)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        public string Correo_personal
-        {
-            get => correo_personal;
-            set => correo_personal = value;
-        }
-        public string Nombre
-        {
-            get => nombre;
-            set => nombre = value;
-        }
-        public string Apellido
-        {
-            get => apellido;
-            set => apellido = value;
-        }
-        public int Num_docu
-        {
-            get => num_docu;
-            set => num_docu = value;
-        }
-        public int Legajo
-        {
-            get => legajo;
-            set => legajo = value;
-        }
-        public int Telef
-        {
-            get => telef;
-            set => telef = value;
-        }
-        public int Cod_facultad
-        {
-            get => cod_facultad;
-            set => cod_facultad = value;
-        }
-        public int IdAsiRepRT
-        {
-            get => idAsiRepRT;
-            set => idAsiRepRT = value;
-        }
-        public int IdAsiDirect
-        {
-            get => idAsiDirect;
-            set => idAsiDirect = value;
-        }
-        public int IdAsgCienti
-        {
-            get => idAsgCienti;
-            set => idAsgCienti = value;
-        }
-        
-
     }
 }

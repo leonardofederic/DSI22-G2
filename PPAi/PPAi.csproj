@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>PPAi</RootNamespace>
     <AssemblyName>PPAi</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\AsignacionResponsableTecnicoRT.cs" />
     <Compile Include="Entidades\AsignaciónCientíficoDelCI.cs" />
     <Compile Include="Entidades\BE_Acceso_Datos.cs" />
     <Compile Include="Entidades\CambioEstadoRT.cs" />
@@ -61,7 +63,7 @@
     <Compile Include="Entidades\PersonalCientífico.cs" />
     <Compile Include="Entidades\RecursoTecnológico.cs" />
     <Compile Include="Entidades\Reserva.cs" />
-    <Compile Include="Entidades\Secion.cs" />
+    <Compile Include="Entidades\Sesion.cs" />
     <Compile Include="Entidades\TipoRecursoTecnológico.cs" />
     <Compile Include="Entidades\Turno.cs" />
     <Compile Include="Entidades\Usuario.cs" />

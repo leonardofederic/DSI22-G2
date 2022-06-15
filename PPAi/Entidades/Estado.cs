@@ -8,59 +8,34 @@ namespace PPAi.Entidades
 {
     public class Estado
     {
-        public Estado()
-        {
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public string ambito { get; set; }
+        public bool esReservable { get; set; }
+        public bool esCancelable { get; set; }
 
-        }
-        private string nombre;
-        private string descripcion;
-        private string ambito;
-        private bool esReservable;
-        private bool esCancelable;
-        private int idCambEsTurno;
-        private int cod_estado;
-        private int idCambEstRT;
-
-        public string Nombre
+        public bool esAmbitoRT()
         {
-            get => nombre;
-            set => nombre = value;
-        }
-        public string Descripcion
-        {
-            get => descripcion;
-            set => descripcion = value;
-        }
-        public string Ambito
-        {
-            get => ambito;
-            set => ambito = value;
-        }
-        public bool EsReservable
-        {
-            get => esReservable;
-            set => esReservable = value;
-        }
-        public bool EsCancelable
-        {
-            get => esCancelable;
-            set => esCancelable = value;
-        }
-        public int IdCambEsTurno
-        {
-            get => idCambEsTurno;
-            set => idCambEsTurno = value;
-        }
-        public int Cod_estado
-        {
-            get => cod_estado;
-            set => cod_estado = value;
-        }
-        public int IdCambEstRT
-        {
-            get => idCambEstRT;
-            set => idCambEstRT = value;
+            if (ambito == "Recurso Tecnologico")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        public bool esDisponible()
+        {
+            if (nombre == "Disponible")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

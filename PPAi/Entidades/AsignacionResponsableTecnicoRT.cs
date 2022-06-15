@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace PPAi.Entidades
 {
-    public class AsignaciónCientíficoDelCI
+    public class AsignacionResponsableTecnicoRT
     {
         public string fechaHasta { get; set; }
         public string fechaDesde { get; set; }
-        public Turno turno { get; set; }
+        public int numeroRT { get; set; }
+        public int personal { get; set; }
         public PersonalCientífico personalCientifico { get; set; }
+        public RecursoTecnológico recursos { get; set; }
     }
 }
