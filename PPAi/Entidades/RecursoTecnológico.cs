@@ -76,12 +76,15 @@ namespace PPAi.Entidades
             return _BD.Ejecutar_Select(sql);
             
         }
-        public void mostrarTurnoReservado(Estado pendienteDeConfirmacion, Estado confirmado, List<AsignaciónCientíficoDelCI> asignacionesCientificos)
+        public List<List<string>> mostrarTurnoReservado(Estado pendienteDeConfirmacion, Estado confirmado, List<AsignaciónCientíficoDelCI> asignacionesCientificos)
         {
+            List<List<string>> datos = null;
             foreach (Turno turn in turno)
             {
-                 datos = turn.mostarReserva(pendienteDeConfirmacion, confirmado, asignacionesCientificos);
+                List<string> recibido = turn.mostarReserva(pendienteDeConfirmacion, confirmado, asignacionesCientificos);
+                if(recibido != null) { datos.Add(recibido); }
             }
+            return datos;
         }
     }
 }

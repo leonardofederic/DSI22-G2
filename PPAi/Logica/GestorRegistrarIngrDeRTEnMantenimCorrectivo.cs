@@ -47,18 +47,25 @@ namespace PPAi.Logica
         //{ return; }
         public void buscarExistenciaTurno()
         {
+            List<AsignaciónCientíficoDelCI> asignacionesCientificos = null; // cargar lista de asignaciones de cientificos
+
             List<Estado> estados = null; // cargar lista de estados
-            Estado pendienteDeConfirmacion = null;
-            Estado confirmado = null;
-            foreach(Estado estado in estados)
+            Estado pendienteDeConfirmacion = null; // estado recuperado de la lista de estados
+            Estado confirmado = null; // estado recuperado de la lista de estados
+
+            foreach (Estado estado in estados) // obtenemos los 2 estados necesarios
             {
-                if (estado.esAmbitoReserva()){
-                    if(estado.esPendienteConfirmacion()) { pendienteDeConfirmacion = estado; }
+                if (estado.esAmbitoReserva())
+                {
+                    if (estado.esPendienteConfirmacion()) { pendienteDeConfirmacion = estado; }
                     else if (estado.esConfirmado()) { confirmado = estado; }
+                }
             }
-            elegido.mostrarTurnoReservado(pendienteDeConfirmacion, confirmado);
+
+            List<List<string>> datos = null;
+            datos = elegido.mostrarTurnoReservado(pendienteDeConfirmacion, confirmado, asignacionesCientificos); // obtenemos los datos de los turnos
         }
-        //public static DataTable ordenarPorCientifico()
+            //public static DataTable ordenarPorCientifico()
         //{ return; }
         //public static DataTable tomarConfirmacionMantenimiento()
         //{ return; }
@@ -66,7 +73,5 @@ namespace PPAi.Logica
         //{ return; }
         //public static DataTable generarNotificacion()
         //{ return; }
-
-
     }
 }
