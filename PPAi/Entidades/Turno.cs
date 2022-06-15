@@ -63,14 +63,15 @@ namespace PPAi.Entidades
             List<string> datos = null;
             if (reserva.esConfirmado(confirmado) || reserva.esPendienteDeConfirmacion(pendienteDeConfirmacion))
             {
-                datos = reserva.mostrarReserva();
+                datos.Add(cod_turno.ToString()); //numero de turno
+                datos.Add(reserva.mostrarReserva()); //fecha y hora reserva
                 
                 //busca la asignacion que tenga asocioado este turno entre las asgnaciones que llegaron como parametro y agrega a la cadena los datos del personal cientifico
                 foreach(AsignaciónCientíficoDelCI asignacion in asignacionesCientificos)
                 {
                     if (asignacion.esTuTurno(this))
                     {
-                        datos.AddRange(asignacion.mostrarDatosCientifico());
+                        datos.Add(asignacion.mostrarDatosCientifico()); //nombre y apellido cientifico
                     }
                 }
                 return datos;

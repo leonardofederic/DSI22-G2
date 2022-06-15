@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PPAi.Entidades;
+using PPAi.Formularios;
 
 namespace PPAi.Logica
 {
@@ -62,11 +63,29 @@ namespace PPAi.Logica
                 }
             }
 
-            List<List<string>> datos = null;
+            List<List<string>> datos = null; //lista compuesta de mas listas que tienen [numero de reserva, nombre y apellido del cientifico, fecha y hora de la reserva]
             datos = elegido.mostrarTurnoReservado(pendienteDeConfirmacion, confirmado, asignacionesCientificos); // obtenemos los datos de los turnos
+
+            datos = ordenarPorCientifico(datos);
+
+            DataTable tabla = new DataTable();
+            tabla.Columns.Add("NroTurno");
+            tabla.Columns.Add("Cientifico");
+            tabla.Columns.Add("FechaHoraReserva");
+
+            foreach (List<string> lista in datos) // obtenemos los 2 estados necesarios
+            {
+                DataRow fila = tabla.NewRow();
+                fila["NroTurno"] = lista[0];
+                fila["Cientifico"] = lista[1];
+                fila["FechaHoraReserva"] = lista[2];
+
+                tabla.Rows.Add(fila);
+            }
+            //Form3.mostrarDatosTurnoReservado(tabla);
         }
-            //public static DataTable ordenarPorCientifico()
-        //{ return; }
+        public static List<List<string>> ordenarPorCientifico(List<List<string>> datos)
+        { return datos; }
         //public static DataTable tomarConfirmacionMantenimiento()
         //{ return; }
         //public static DataTable registrarMantenimetoRT()

@@ -40,12 +40,13 @@ namespace PPAi.Entidades
         
         public bool esConfirmado(Estado confirmado) { return estado == confirmado; }
         public bool esPendienteDeConfirmacion(Estado pendienteDeConfirmacion) { return estado == pendienteDeConfirmacion; }
-        public List<string> mostrarReserva()
+        public string mostrarReserva() //devuleve la fecha y hora de inicio
         {
-            List<string> datos = new List<string>();
+            /*List<string> datos = new List<string>();
             datos.Add(fechaInicio);
-            datos.Add(fechaFin);
-            return datos;
+            datos.Add(fechaFin);*/
+
+            return fechaInicio;
         }
     }
 }

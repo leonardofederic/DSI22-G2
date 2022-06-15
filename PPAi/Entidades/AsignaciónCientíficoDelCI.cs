@@ -50,7 +50,7 @@ namespace PPAi.Entidades
             }
             return respuesta;
         }
-        public List<string> mostrarDatosCientifico()
+        public string mostrarDatosCientifico()
         {
             //retorna una lista con los datos minimos del personal cientifico asocioado a esta asignacionCientifico
             return personalCientífico.mostrarDatos();

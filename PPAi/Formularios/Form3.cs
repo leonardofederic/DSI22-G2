@@ -16,5 +16,9 @@ namespace PPAi.Formularios
         {
             InitializeComponent();
         }
+        public void mostrarDatosTurnoReservado(DataTable datos) //llega una lista con listas compuestas de [numero de reserva, nombre y apellido del cientifico, fecha y hora de la reserva] todos son strings
+        {
+            grid_Turno.DataSource = datos;
+        }
     }
 }
